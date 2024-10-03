@@ -1,0 +1,21 @@
+/* LOGIN FORM CONTAINER */
+.login_form-section {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    border: 1px solid var(--color-primary);
+    height: 100%;
+
+    /* CENTER THE FORM */
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);;
+}
+
+.side_section-container img {
+    height: 30rem;
+}
