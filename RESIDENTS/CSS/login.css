@@ -108,7 +108,7 @@ img {
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background-color: var(--color-white);
+
 }
 
 .side_section-container img {
@@ -117,6 +117,7 @@ img {
     border: 2px solid var(--color-primary);
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
+    background-color: var(--color-white);
 }
 
 .form_section-container {

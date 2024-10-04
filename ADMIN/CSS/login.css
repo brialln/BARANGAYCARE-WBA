@@ -108,7 +108,6 @@ img {
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background-color: var(--color-white);
 }
 
 .side_section-container img {
@@ -127,6 +126,7 @@ img {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 4rem;
+    background-color: var(--color-white);
 }
 
 .form_logo {
