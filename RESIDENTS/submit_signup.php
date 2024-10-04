@@ -21,10 +21,10 @@ $birthdate = $conn->real_escape_string(trim($_POST['birthdate']));
 $gender = $conn->real_escape_string(trim($_POST['gender']));
 
 // File upload validation
-$target_dir = "uploads/";
+$target_dir = "C:/xampp/htdocs/BARANGAYCARE-WBA/RESIDENTS/uploads/";
 $proof_of_residency = $target_dir . basename($_FILES["proof_of_residency"]["name"]);
 $uploadOk = 1;
-$fileType = strtolower(pathinfo($proof_of_residency,PATHINFO_EXTENSION));
+$fileType = strtolower(pathinfo($proof_of_residency, PATHINFO_EXTENSION));
 
 // Allow certain file formats
 if($fileType != "pdf" && $fileType != "jpg" && $fileType != "png") {
@@ -37,12 +37,12 @@ if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
 } else {
     if (move_uploaded_file($_FILES["proof_of_residency"]["tmp_name"], $proof_of_residency)) {
-        // Insert into database
-        $sql = "INSERT INTO residents (name, address, email, phone_number, birthdate, gender, proof_of_residency)
-        VALUES ('$name', '$address', '$email', '$phone', '$birthdate', '$gender', '$proof_of_residency')";
+        // Insert into database with status set to 'pending'
+        $sql = "INSERT INTO residents (name, address, email, phone_number, birthdate, gender, proof_of_residency, status)
+        VALUES ('$name', '$address', '$email', '$phone', '$birthdate', '$gender', '$proof_of_residency', 'pending')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
+            echo "New record created successfully. Status is set to pending.";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
