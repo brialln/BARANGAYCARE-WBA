@@ -19,6 +19,7 @@
     --color-light-green: #99FFCC;
     --color-charcoal-gray: #36454F;
     --color-white: #FFFFFF;
+    --color-ash: #F5F5F5;
     --color-black: #000000;
 
     --font-size: 0.9rem;
@@ -105,6 +106,7 @@ img {
     width: 30%;
     margin: 0 auto;
     height: 100vh;
+    margin-bottom: 25rem;
 }
 
 .form_section-container {
@@ -113,20 +115,24 @@ img {
 
 .form_logo {
     border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
+    height: 6rem;
+    width: 6rem;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
 }
 
-.form_section h2 {
-    text-align: center;
+.form_section h4 {
+    margin-top: 1.2rem;
     color: var(--color-primary);
 }
 
-
+.form_section h5 {
+    font-weight: 500;
+    margin-top: 0.8rem;
+    color: var(--color-black);
+}
 
 .alert_message.error {
     background: var(--color-light-red);
@@ -135,6 +141,8 @@ img {
     margin-bottom: 1rem;
     padding: 0.8rem;
     border-radius: var(--card-border-radius-2);
+    text-align: center;
+    font-size: 0.9rem;
 }
 
 .alert_message.success {
@@ -173,6 +181,7 @@ input, textarea, select {
     border-radius: var(--card-border-radius-2);
     resize: none;
     color: var(--color-black-font);
+    appearance: none;
 }
 
 .form_section small {
