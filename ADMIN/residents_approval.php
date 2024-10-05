@@ -120,7 +120,7 @@ $result = $conn->query($sql);
     <div class="modal-content">
         <span class="close">&times;</span>
         <h3>Proof of Residency</h3>
-        <img id="proofImage" style="width: 100%; height: auto;" src="" alt="Proof of Residency">
+        <iframe id="proofFrame" style="width: 100%; height: 500px;" src=""></iframe>
     </div>
 </div>
 
@@ -148,7 +148,7 @@ $result = $conn->query($sql);
             <td><?php echo htmlspecialchars($row['birthdate']); ?></td>
             <td><?php echo htmlspecialchars($row['gender']); ?></td>
             <td>
-                <!-- Button to open modal and display proof -->
+                <!-- Link to open modal and display proof -->
                 <button type="button" class="action-btn" onclick="openProofModal('/BARANGAYCARE-WBA/RESIDENTS/uploads/<?php echo htmlspecialchars($row['proof_of_residency']); ?>')">View Proof</button>
             </td>
             <td><?php echo ucfirst(htmlspecialchars($row['status'])); ?></td>
@@ -178,13 +178,13 @@ $result = $conn->query($sql);
 
 <!-- JavaScript to handle modal display -->
 <script>
-    // Get modal element and image element
+    // Get modal element and iframe
     var modal = document.getElementById("proofModal");
-    var proofImage = document.getElementById("proofImage");
+    var proofFrame = document.getElementById("proofFrame");
 
-    // Function to open modal and set image source
+    // Function to open modal and set iframe source
     function openProofModal(url) {
-        proofImage.src = url;
+        proofFrame.src = url;
         modal.style.display = "block";
     }
 
@@ -194,14 +194,14 @@ $result = $conn->query($sql);
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
-        proofImage.src = ""; // Reset image source
+        proofFrame.src = ""; // Reset iframe source
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
-            proofImage.src = ""; // Reset image source
+            proofFrame.src = ""; // Reset iframe source
         }
     }
 </script>
