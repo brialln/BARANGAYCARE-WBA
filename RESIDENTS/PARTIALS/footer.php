@@ -1,48 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RESIDENT'S LOGIN | BARANGAY-WBA</title>
-
-    <!-- MONTSERRAT GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS STYLESHEET LINK -->
-     <link rel="stylesheet" href="CSS/style.css">
-     <link rel="stylesheet" href="CSS/login.css">
-
-     <!-- ICONSCOUT CDN -->
-    <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
-
-</head>
-<body>
-    <section class="form_section">
-        <div class="container side_section-container">
-            <img src="IMAGES/pamplona_side-section.png">
-        </div>
-
-        <div class="container form_section-container">
-            <h3>LOGIN</h3> 
-            <h4>Login your credentials.</h4>
-            <div class="alert_message error">
-                <p>This is an error message</p>
-            </div>
-            <form action="" method="POST" enctype="multipart/form-data">
-                <input type="text" placeholder="Barangay ID" id="barangay-id" name="barangay-id" required>
-                <input type="password" placeholder="Password" id="resident-password" name="resident-password" required>
-
-                <button type="submit" class="btn">Login</button>
-                <center><small><b> <a href="forgot_password.html">Forgot Password?</a></b></small></center>
-                <small>Doesn't have an account? <b> <a href="sign_up.html">Sign up</a></b></small>
-            </form>
-        </div>
-    </section>
-    <!-- =========== END OF FORM SECTION =========== -->
-
-    <footer>
+<footer>
         <div class="container footer_container">
                 <div class="footer_1">
                     <img class="footer_logo" src="IMAGES/pamplona_logo.JPG">
@@ -112,6 +68,4 @@
         <div class="footer_copyright">
             <small>Copyright &copy; Barangay Pamplona Uno | Las Pinas City</small>
         </div>
-    </footer>
-</body>
-</html>
+</footer>
