@@ -64,15 +64,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 try {
                     // Server settings
                     $mail->isSMTP();
-                    $mail->Host = 'smtp.mail.yahoo.com'; // Set the SMTP server
+                    $mail->Host = 'smtp.gmail.com'; // Set the SMTP server to Gmail
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'barangaycarelp@yahoo.com'; // Your Yahoo email
-                    $mail->Password = 'supersarap.'; // Your Yahoo password
-                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                    $mail->Port = 587; // TCP port to connect to
+                    $mail->Username = 'instaxly@gmail.com'; // Your Gmail email
+                    $mail->Password = 'irok vrfn whqu dhkv'; // Your Google App password
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption
+                    $mail->Port = 587; // Port for TLS
 
                     // Recipients
-                    $mail->setFrom('barangaycarelp@yahoo.com', 'Barangay System');
+                    $mail->setFrom('instaxly@gmail.com', 'Barangay System');
                     $mail->addAddress($resident['email'], $resident['name']); // Add resident's email
 
                     // Email content
